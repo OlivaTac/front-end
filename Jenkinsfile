@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh 'apk update && apk add nodejs'
+        sh 'apk add --update nodejs npm '
         sh 'npm install'
       }
     }
